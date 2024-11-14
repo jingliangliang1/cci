@@ -27,8 +27,8 @@ jobs:
             generator: "Unix Makefiles"
           - name: ubuntu
             version: 22.04
-            cxx_compiler: g++-14
-            c_compiler: gcc-14
+            cxx_compiler: g++-17
+            c_compiler: gcc-17
             generator: "Unix Makefiles"
     runs-on: ${{matrix.os.name}}-${{matrix.os.version}}
 
@@ -88,7 +88,7 @@ jobs:
           -DSYSTEMCCCI_BUILD_TESTS=ON ${{env.ESC}}
           -DCMAKE_CXX_COMPILER=${{matrix.os.cxx_compiler}} ${{env.ESC}}
           -DCMAKE_C_COMPILER=${{matrix.os.c_compiler}} ${{env.ESC}}
-          -DCMAKE_CXX_STANDARD=11 ${{env.ESC}}
+          -DCMAKE_CXX_STANDARD=17 ${{env.ESC}}
           -DCMAKE_PREFIX_PATH=${{env.SYSTEMC_HOME}}/lib/cmake/SystemCLanguage ${{env.ESC}}
           -DCMAKE_INSTALL_PREFIX=${{env.CCI_HOME}} ${{env.ESC}}
           ../../..
