@@ -13,12 +13,12 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        systemc_version: [2.3.4, 3.0.0]
+        systemc_version: [3.0.0]
         os:
           - name: ubuntu
             version: 20.04
-            cxx_compiler: g++-9
-            c_compiler: gcc-9
+            cxx_compiler: g++-10
+            c_compiler: gcc-10
             generator: "Unix Makefiles"
           - name: ubuntu
             version: 22.04
@@ -27,8 +27,8 @@ jobs:
             generator: "Unix Makefiles"
           - name: ubuntu
             version: 22.04
-            cxx_compiler: g++-17
-            c_compiler: gcc-17
+            cxx_compiler: g++-12
+            c_compiler: gcc-12
             generator: "Unix Makefiles"
     runs-on: ${{matrix.os.name}}-${{matrix.os.version}}
 
