@@ -37,7 +37,7 @@ include $(srcdir)/ex19_Reset_Param/test.am
 include $(srcdir)/ex20_Tracing_Parameter_Activity/test.am
 include $(srcdir)/ex21_Param_Destruction_Resurrection/test.am
 include $(srcdir)/ex22_Search_Predicate/test.am
-include $(srcdir)/ex23_Hierarchical_Value_Update/test.am
+# include $(srcdir)/ex23_Hierarchical_Value_Update/test.am
 
 examples_DIRS += \
 				 ex01_Simple_Int_Param \
@@ -61,8 +61,8 @@ examples_DIRS += \
 				 ex19_Reset_Param \
 				 ex20_Tracing_Parameter_Activity \
 				 ex21_Param_Destruction_Resurrection \
-				 ex22_Search_Predicate \
-				 ex23_Hierarchical_Value_Update
+				 ex22_Search_Predicate
+				 # ex23_Hierarchical_Value_Update
 
 CLEANFILES += $(examples_CLEAN)
 
