@@ -40,6 +40,7 @@
 
 cmake_minimum_required (VERSION 3.5)
 
+find_package(SystemCLanguage CONFIG REQUIRED)
 set (CMAKE_CXX_STANDARD ${SystemC_CXX_STANDARD})
 
 if (NOT TARGET check)
