@@ -40,9 +40,7 @@
 
 cmake_minimum_required (VERSION 3.5)
 
-set(CMAKE_CXX_STANDARD 20)
-
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set (CMAKE_CXX_STANDARD ${SystemC_CXX_STANDARD})
 
 if (NOT TARGET check)
    add_custom_target(check COMMAND ${CMAKE_CTEST_COMMAND} -C "${CMAKE_BUILD_TYPE}")
